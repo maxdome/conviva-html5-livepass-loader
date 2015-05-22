@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>conviva-html5-livepass-loader</title>
+
+    <script>var CONVIVA_CUSTOMER_KEY='c3.XXXXXX'</script>
+    <script src="loader.js"></script>
+
+</head>
+<body>
+    <button>load video</button>
+    <video controls></video>
+    <script>
+        var loadVideo = function() {
+            var video = document.getElementsByTagName('video')[0],
+                source = document.createElement('source');
+
+            source.src = 'http://techslides.com/demos/sample-videos/small.mp4';
+            source.type = 'video/mp4';
+            video.appendChild(source);
+            video.play();
+        };
+
+        var loadButton = document.getElementsByTagName('button')[0];
+
+        loadButton.addEventListener('click', loadVideo);
+    </script>
+</body>
+</html>
